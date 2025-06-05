@@ -1,0 +1,169 @@
+/* Define color variables */
+:root {
+    --primary-blue: #007BFF;
+    --neon-green: #32CD32;
+    --vibrant-red: #FF3B30;
+    --dark-gray: #333333;
+    --soft-yellow: #FFD700;
+    --pure-white: #FFFFFF;
+    --accent-purple: #8E44AD;
+}
+
+/* Apply them to elements */
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: var(--pure-white);
+    color: var(--dark-gray);
+}
+
+header {
+    background-color: var(--primary-blue);
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--pure-white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section */
+#hero {
+    padding: 40px;
+    background-image: url('assets/images/hero-bg.webp');
+    background-size: cover;
+    color: var(--pure-white); 
+    font-family: 'Oswald', sans-serif;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: var(--vibrant-red);
+    border: none;
+    padding: 12px 24px;
+    color: var(--pure-white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--neon-green);
+}
+
+/* Achievements & Badges */
+.badge {
+    background-color: var(--accent-purple);
+    color: var(--soft-yellow);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Challenge Overview */
+#challenge-overview {
+    padding: 20px;
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+}
+
+/* Leaderboard */
+#leaderboard {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--pure-white);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--dark-gray);
+}
+
+th {
+    background-color: var(--neon-green);
+    color: var(--dark-gray);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Profile Overview */
+#profile-overview {
+    padding: 20px;
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+}
+
+/* Stats Section */
+#stats {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+}
+
+#stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+#stats li {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Achievements & Badges */
+#badges {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--accent-purple);
+    color: var(--soft-yellow);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--pure-white);
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}

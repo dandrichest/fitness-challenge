@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join fitness challenges, track progress, and achieve goals with our interactive fitness app.">
-    <title>Fitness Challenge</title>
+    <meta name="description" content="View your fitness progress, achievements, and earned rewards.">
+    <title>Profile | Fitness Challenge</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +28,28 @@
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to the Fitness Challenge!</h1>
-        <p>Track your progress, challenge friends, and stay motivated.</p>
-        <button onclick="joinChallenge()">Join a Challenge</button>
-    </section>
+    <main>
+        <section id="profile-overview">
+            <h1>My Profile</h1>
+            <p>Track your fitness progress and achievements.</p>
+        </section>
+
+        <section id="stats">
+            <h2>Fitness Stats</h2>
+            <ul>
+                <li>Steps: <span id="steps-count">0</span></li>
+                <li>Calories Burned: <span id="calories-burned">0</span></li>
+                <li>Workouts Completed: <span id="workouts-count">0</span></li>
+            </ul>
+        </section>
+
+        <section id="badges">
+            <h2>Achievements & Badges</h2>
+            <div id="badge-container">
+                <!-- Badges will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2023 Fitness Challenge. All rights reserved.</p>
     </footer>
