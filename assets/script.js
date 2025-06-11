@@ -877,7 +877,7 @@ function updateUserStats(newStats) {
 
 // Simulate fitness data updates
 function simulateFitnessDataUpdate() {
-    // This would integrate with fitness APIs like Google Fit or Fitbit
+    // This would integrate with fitness API Fitbit
     function getAuthCodeFromURL() {
         const params = new URLSearchParams(window.location.search);
         return params.get('code'); // Extract authorization code
