@@ -102,7 +102,7 @@ body {
     width: 2rem;
     height: 2rem;
     padding: var(--spacing-xs);
-    background: var(--gradient-primary);
+   
     color: var(--pure-white);
     border-radius: var(--radius-lg);
 }
