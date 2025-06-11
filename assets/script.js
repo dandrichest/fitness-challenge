@@ -846,6 +846,29 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
+// Handle Social Sharing
+document.getElementById("shareButton").addEventListener("click", function() {
+    const profileURL = "https://dandrichest.github.io/fitness-challenge/profile.html"; // Replace with actual profile URL
+    const profileText = "Check out my fitness profile! 🏋️‍♂️🔥"; // Custom share message
+
+    // Social Media Share Options
+    const shareOptions = {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(profileURL)}`,
+        twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(profileText)}&url=${encodeURIComponent(profileURL)}`,
+        whatsapp: `https://wa.me/?text=${encodeURIComponent(profileText + " " + profileURL)}`
+    };
+
+    // Choose a social media platform (Example: Twitter)
+    const selectedPlatform = prompt("Where do you want to share? (Facebook, Twitter, WhatsApp)").toLowerCase();
+
+    if (shareOptions[selectedPlatform]) {
+        window.open(shareOptions[selectedPlatform], "_blank");
+    } else {
+        alert("Invalid platform. Please choose Facebook, Twitter, or WhatsApp.");
+    }
+});
+
+
 // Load user data from localStorage
 function loadUserData() {
     const savedData = localStorage.getItem('fitChallengeUserData');
@@ -948,6 +971,11 @@ function simulateFitnessDataUpdate() {
         })
         .catch(error => console.error('Error refreshing token:', error));
     }
+    // ✅ Call `refreshAccessToken` When Token Expires
+    const storedRefreshToken = localStorage.getItem('fitbitRefreshToken'); // Ensure it's saved during initial authentication
+    if (storedRefreshToken) {
+    refreshAccessToken(storedRefreshToken);
+}
         
     
     const newSteps = userData.todaySteps + Math.floor(Math.random() * 100);
