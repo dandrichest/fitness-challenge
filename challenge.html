@@ -3,56 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join fitness challenges, compete with friends, and track your progress.">
-    <title>Challenge Tracker | Fitness Challenge</title>
-
-    <!-- Google Fonts -->
+    <title>FitChallenge - Gamified Fitness Platform</title>
+    <meta name="description" content="Join fitness challenges, compete with friends, and stay motivated with our gamified fitness platform.">
+    <meta name="keywords" content="fitness, challenge, health, workout, Google Fit, PWA">
+    <meta name="author" content="Daniel Oyeniyi">
+    <meta name="theme-color" content="#007BFF">
+    <!-- Open Graph (Social Media Sharing) -->
+    <meta property="og:title" content="Join the Fitness Challenge!">
+    <meta property="og:description" content="Track your workouts and achieve fitness goals!">
+    <meta property="og:image" content="assets/images/social-preview.jpg">
+    <meta property="og:url" content="https://yourapp.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="180x180" href="/path-to-your-icon/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@500&family=Roboto:wght@400&family=Lato:wght@400&family=Bebas+Neue&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
-    <script defer src="assets/script.js"></script>
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/png">
+    <link rel="manifest" href="manifest.json">
+  
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="assets/images/logo.png" alt="Fitness Challenge Logo">
-            <h1>Fitness Challenge</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="challenge.html">Challenges</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M14 9h1.5a2.5 2.5 0 0 1 0 5H14"></path>
+                        <path d="m6 9 3 3 3-3"></path>
+                    </svg>
+                    <span class="logo-text">Fitness Challenge</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="challenge.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Challenges</span>
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <span class="nav-icon">👤</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="btn-icon" id="notificationBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                        <path d="m13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+    
+                <button type="button" class="btn-icon mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" title="Open Menu">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="challenge-overview">
-            <h1>Active Challenges</h1>
-            <p>Track your fitness progress and compete with others!</p>
-        </section>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1 class="page-title">Challenges</h1>
+                    <p class="page-subtitle">Join challenges and compete with friends to stay motivated!</p>
+                </div>
+                <button class="btn-primary" id="createChallengeBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8v8"></path>
+                    </svg>
+                    <span>Create Challenge</span>
+                </button>
+            </section>
 
-        <section id="leaderboard">
-            <h2>Leaderboard</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>User</th>
-                        <th>Steps</th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard-data">
-                    <!-- Dynamic leaderboard entries will be injected here -->
-                </tbody>
-            </table>
-        </section>
+            <!-- Active Challenges -->
+            <section class="challenges-section">
+                <h2 class="section-title">Active Challenges</h2>
+                <div class="challenges-grid" id="activeChallenges">
+                    <!-- Active challenges will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Available Challenges -->
+            <section class="challenges-section">
+                <h2 class="section-title">Join a Challenge</h2>
+                <div class="challenges-grid" id="availableChallenges">
+                    <!-- Available challenges will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Leaderboard Section -->
+            <section class="leaderboard-section">
+                <div class="section-header">
+                    <h2 class="section-title">Leaderboard - 30-Day Step Challenge</h2>
+                    <div class="leaderboard-controls">
+                        <select class="challenge-selector" id="challengeSelector" aria-label="Choose a Challenge">
+                            <option value="30-day-steps">30-Day Step Challenge</option>
+                            <option value="weekend-warrior">Weekend Warrior</option>
+                            <option value="hydration-station">Hydration Station</option>
+                        </select>
+                        <button class="btn-secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                <polyline points="16,6 12,2 8,6"></polyline>
+                                <line x1="12" x2="12" y1="2" y2="15"></line>
+                            </svg>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Challenge Stats -->
+                <div class="leaderboard-stats">
+                    <div class="stat-card stat-card-blue">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <span class="stat-title">Total Participants</span>
+                                <span class="stat-number">24</span>
+                            </div>
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="m19 8 2 2-2 2"></path>
+                                    <path d="m21 10-7.5 0"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-card-green">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <span class="stat-title">Average Completion</span>
+                                <span class="stat-number">87%</span>
+                            </div>
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
+                                    <polyline points="17,6 23,6 23,12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-card-purple">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <span class="stat-title">Days Remaining</span>
+                                <span class="stat-number">12</span>
+                            </div>
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6"></path>
+                                    <path d="m21 12-6 0m-6 0-6 0"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top 3 Podium -->
+                <div class="podium-section">
+                    <h3 class="podium-title">🏆 Top Performers</h3>
+                    <div class="podium">
+                        <div class="podium-place podium-second">
+                            <div class="podium-avatar">👩‍🦰</div>
+                            <div class="podium-badge">2nd Place</div>
+                            <div class="podium-name">Emma Wilson</div>
+                            <div class="podium-score">332,180 steps</div>
+                            <div class="podium-points">2,280 points</div>
+                        </div>
+                        <div class="podium-place podium-first">
+                            <div class="podium-avatar">👨‍💻</div>
+                            <div class="podium-badge">🏆 Champion</div>
+                            <div class="podium-name">Mike Johnson</div>
+                            <div class="podium-score">345,240 steps</div>
+                            <div class="podium-points">2,450 points</div>
+                        </div>
+                        <div class="podium-place podium-third">
+                            <div class="podium-avatar">👩‍💼</div>
+                            <div class="podium-badge">3rd Place</div>
+                            <div class="podium-name">You (Sarah)</div>
+                            <div class="podium-score">298,650 steps</div>
+                            <div class="podium-points">1,950 points</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Leaderboard -->
+                <div class="leaderboard-table">
+                    <div class="table-header">
+                        <h3 class="table-title">Complete Rankings</h3>
+                    </div>
+                    <div class="leaderboard-list" id="leaderboardList">
+                        <!-- Leaderboard entries will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <!-- Create Challenge Modal -->
+    <div class="modal" id="createChallengeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Create New Challenge</h3>
+                <button type="button" class="modal-close" id="closeModal" aria-label="modal close" title="close modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m18 6-12 12"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <form class="modal-form" id="createChallengeForm">
+                <div class="form-group">
+                    <label class="form-label">Challenge Name</label>
+                    <input type="text" class="form-input" placeholder="Enter challenge name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-textarea" rows="3" placeholder="Describe your challenge" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Duration (days)</label>
+                        <input type="number" class="form-input" placeholder="7" min="1" max="365" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Type</label>
+                        <select class="form-select" id="formSelect" aria-label="Select challenge type" required>
+                            <option value="">Select type</option>
+                            <option value="steps">Steps</option>
+                            <option value="workout">Workout</option>
+                            <option value="hydration">Hydration</option>
+                            <option value="sleep">Sleep</option>
+                            <option value="mindfulness">Mindfulness</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Prize/Reward</label>
+                    <input type="text" class="form-input" placeholder="What's the reward?" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelCreate">Cancel</button>
+                    <button type="submit" class="btn-primary">Create Challenge</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Fitness Challenge. All rights reserved.</p>
+        <p>&copy; 2025 Fitness Challenge | Stay Fit, Stay Healthy</p>
     </footer>
-    
+    <script src="assets/script.js"></script>
 </body>
 </html>

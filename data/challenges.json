@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "30-Day Step Challenge",
+    "description": "Walk 10,000 steps daily for 30 days",
+    "type": "steps",
+    "duration": 30,
+    "target": 10000,
+    "unit": "steps",
+    "participants": 24,
+    "startDate": "2024-01-01",
+    "endDate": "2024-01-30",
+    "prize": "Winner gets $50 gift card",
+    "icon": "🚶‍♀️",
+    "color": "blue",
+    "status": "active",
+    "createdBy": "admin",
+    "rules": [
+      "Walk at least 10,000 steps daily",
+      "Track steps using fitness app or device",
+      "Submit daily progress",
+      "No cheating or false reporting"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Weekend Warrior",
+    "description": "Complete 3 workouts this weekend",
+    "type": "workout",
+    "duration": 2,
+    "target": 3,
+    "unit": "workouts",
+    "participants": 8,
+    "startDate": "2024-01-20",
+    "endDate": "2024-01-21",
+    "prize": "Glory and bragging rights",
+    "icon": "⚡",
+    "color": "red",
+    "status": "active",
+    "createdBy": "mike_johnson",
+    "rules": [
+      "Complete at least 3 workouts over the weekend",
+      "Each workout must be at least 30 minutes",
+      "Any type of exercise counts",
+      "Submit workout logs with photos"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Hydration Hero",
+    "description": "Drink 8 glasses of water daily for a week",
+    "type": "hydration",
+    "duration": 7,
+    "target": 8,
+    "unit": "glasses",
+    "participants": 16,
+    "startDate": "2024-01-15",
+    "endDate": "2024-01-21",
+    "prize": "Smart water bottle",
+    "icon": "💧",
+    "color": "cyan",
+    "status": "active",
+    "createdBy": "emma_wilson",
+    "rules": [
+      "Drink at least 8 glasses of water daily",
+      "Track water intake throughout the day",
+      "One glass = 8 oz of water",
+      "Other beverages don't count"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Heart Rate Zone",
+    "description": "Maintain target heart rate for 30 minutes daily",
+    "type": "cardio",
+    "duration": 14,
+    "target": 30,
+    "unit": "minutes",
+    "participants": 15,
+    "startDate": "2024-01-25",
+    "endDate": "2024-02-07",
+    "prize": "Fitness tracker upgrade",
+    "icon": "❤️",
+    "color": "pink",
+    "status": "upcoming",
+    "createdBy": "david_chen",
+    "rules": [
+      "Maintain target heart rate zone for 30+ minutes",
+      "Target zone: 70-85% of max heart rate",
+      "Use heart rate monitor for tracking",
+      "Submit daily heart rate data"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Meditation March",
+    "description": "Practice 10 minutes of meditation daily",
+    "type": "mindfulness",
+    "duration": 30,
+    "target": 10,
+    "unit": "minutes",
+    "participants": 31,
+    "startDate": "2024-03-01",
+    "endDate": "2024-03-30",
+    "prize": "Premium meditation app subscription",
+    "icon": "🧘‍♀️",
+    "color": "purple",
+    "status": "upcoming",
+    "createdBy": "lisa_garcia",
+    "rules": [
+      "Meditate for at least 10 minutes daily",
+      "Use guided meditation or silent practice",
+      "Track sessions in meditation app",
+      "Submit daily meditation logs"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sleep Champion",
+    "description": "Get 8 hours of quality sleep nightly",
+    "type": "sleep",
+    "duration": 21,
+    "target": 8,
+    "unit": "hours",
+    "participants": 12,
+    "startDate": "2024-02-01",
+    "endDate": "2024-02-21",
+    "prize": "Premium sleep mask and pillow",
+    "icon": "😴",
+    "color": "purple",
+    "status": "upcoming",
+    "createdBy": "sarah_johnson",
+    "rules": [
+      "Sleep for at least 8 hours nightly",
+      "Track sleep using fitness device",
+      "Maintain consistent sleep schedule",
+      "Submit daily sleep quality reports"
+    ]
+  }
+]

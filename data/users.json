@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "username": "mike_johnson",
+    "name": "Mike Johnson",
+    "email": "mike.johnson@email.com",
+    "avatar": "👨‍💻",
+    "status": "online",
+    "joinDate": "2023-12-01",
+    "location": "San Francisco, CA",
+    "bio": "Software engineer passionate about fitness and technology",
+    "stats": {
+      "totalPoints": 2450,
+      "globalRank": 1,
+      "currentStreak": 23,
+      "longestStreak": 45,
+      "challengesCompleted": 8,
+      "challengesWon": 3,
+      "totalSteps": 345240,
+      "totalWorkouts": 156,
+      "totalCalories": 28450
+    },
+    "currentChallenges": [
+      {
+        "challengeId": 1,
+        "progress": 98,
+        "rank": 1,
+        "dailyProgress": [
+          { "date": "2024-01-15", "value": 12500, "completed": true },
+          { "date": "2024-01-16", "value": 11200, "completed": true },
+          { "date": "2024-01-17", "value": 10800, "completed": true }
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "id": "week_warrior",
+        "name": "Week Warrior",
+        "icon": "🔥",
+        "description": "Complete 7 days in a row",
+        "earnedDate": "2024-01-10"
+      },
+      {
+        "id": "step_master",
+        "name": "Step Master",
+        "icon": "👟",
+        "description": "10,000 steps in a day",
+        "earnedDate": "2024-01-05"
+      },
+      {
+        "id": "champion",
+        "name": "Champion",
+        "icon": "🏆",
+        "description": "Win a challenge",
+        "earnedDate": "2024-01-01"
+      }
+    ],
+    "friends": [2, 3, 4, 5],
+    "preferences": {
+      "notifications": true,
+      "privacy": "friends",
+      "units": "metric"
+    }
+  },
+  {
+    "id": 2,
+    "username": "emma_wilson",
+    "name": "Emma Wilson",
+    "email": "emma.wilson@email.com",
+    "avatar": "👩‍🦰",
+    "status": "offline",
+    "joinDate": "2023-11-15",
+    "location": "New York, NY",
+    "bio": "Marketing professional who loves yoga and running",
+    "stats": {
+      "totalPoints": 2280,
+      "globalRank": 2,
+      "currentStreak": 18,
+      "longestStreak": 32,
+      "challengesCompleted": 6,
+      "challengesWon": 2,
+      "totalSteps": 332180,
+      "totalWorkouts": 142,
+      "totalCalories": 26800
+    },
+    "currentChallenges": [
+      {
+        "challengeId": 2,
+        "progress": 94,
+        "rank": 1,
+        "dailyProgress": [
+          { "date": "2024-01-20", "value": 1, "completed": true },
+          { "date": "2024-01-21", "value": 2, "completed": false }
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "id": "strength_builder",
+        "name": "Strength Builder",
+        "icon": "💪",
+        "description": "Complete 50 strength workouts",
+        "earnedDate": "2024-01-12"
+      },
+      {
+        "id": "energy_boost",
+        "name": "Energy Boost",
+        "icon": "⚡",
+        "description": "High intensity workout streak",
+        "earnedDate": "2024-01-08"
+      },
+      {
+        "id": "target_achiever",
+        "name": "Target Achiever",
+        "icon": "🎯",
+        "description": "Hit daily targets for a week",
+        "earnedDate": "2024-01-03"
+      }
+    ],
+    "friends": [1, 3, 4, 5],
+    "preferences": {
+      "notifications": true,
+      "privacy": "public",
+      "units": "imperial"
+    }
+  },
+  {
+    "id": 3,
+    "username": "sarah_johnson",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@email.com",
+    "avatar": "👩‍💼",
+    "status": "online",
+    "joinDate": "2023-12-10",
+    "location": "Chicago, IL",
+    "bio": "Business analyst on a fitness journey",
+    "stats": {
+      "totalPoints": 1950,
+      "globalRank": 3,
+      "currentStreak": 15,
+      "longestStreak": 28,
+      "challengesCompleted": 5,
+      "challengesWon": 1,
+      "totalSteps": 298650,
+      "totalWorkouts": 98,
+      "totalCalories": 22100
+    },
+    "currentChallenges": [
+      {
+        "challengeId": 1,
+        "progress": 85,
+        "rank": 3,
+        "dailyProgress": [
+          { "date": "2024-01-15", "value": 9800, "completed": false },
+          { "date": "2024-01-16", "value": 10200, "completed": true },
+          { "date": "2024-01-17", "value": 8247, "completed": false }
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "id": "week_warrior",
+        "name": "Week Warrior",
+        "icon": "🔥",
+        "description": "Complete 7 days in a row",
+        "earnedDate": "2024-01-14"
+      },
+      {
+        "id": "step_master",
+        "name": "Step Master",
+        "icon": "👟",
+        "description": "10,000 steps in a day",
+        "earnedDate": "2024-01-11"
+      },
+      {
+        "id": "social_butterfly",
+        "name": "Social Butterfly",
+        "icon": "🦋",
+        "description": "Invite 5 friends",
+        "earnedDate": "2024-01-07"
+      }
+    ],
+    "friends": [1, 2, 4, 5],
+    "preferences": {
+      "notifications": true,
+      "privacy": "friends",
+      "units": "imperial"
+    },
+    "isCurrentUser": true
+  },
+  {
+    "id": 4,
+    "username": "david_chen",
+    "name": "David Chen",
+    "email": "david.chen@email.com",
+    "avatar": "👨‍🎓",
+    "status": "online",
+    "joinDate": "2023-11-20",
+    "location": "Seattle, WA",
+    "bio": "Graduate student balancing studies and fitness",
+    "stats": {
+      "totalPoints": 1820,
+      "globalRank": 4,
+      "currentStreak": 12,
+      "longestStreak": 25,
+      "challengesCompleted": 4,
+      "challengesWon": 1,
+      "totalSteps": 287420,
+      "totalWorkouts": 89,
+      "totalCalories": 19800
+    },
+    "currentChallenges": [
+      {
+        "challengeId": 1,
+        "progress": 82,
+        "rank": 4,
+        "dailyProgress": [
+          { "date": "2024-01-15", "value": 8900, "completed": false },
+          { "date": "2024-01-16", "value": 9500, "completed": false },
+          { "date": "2024-01-17", "value": 6780, "completed": false }
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "id": "knowledge_seeker",
+        "name": "Knowledge Seeker",
+        "icon": "📚",
+        "description": "Complete educational fitness content",
+        "earnedDate": "2024-01-09"
+      },
+      {
+        "id": "brain_power",
+        "name": "Brain Power",
+        "icon": "🧠",
+        "description": "Balance mental and physical fitness",
+        "earnedDate": "2024-01-06"
+      },
+      {
+        "id": "innovation",
+        "name": "Innovation",
+        "icon": "💡",
+        "description": "Try new workout types",
+        "earnedDate": "2024-01-02"
+      }
+    ],
+    "friends": [1, 2, 3, 5],
+    "preferences": {
+      "notifications": false,
+      "privacy": "friends",
+      "units": "metric"
+    }
+  },
+  {
+    "id": 5,
+    "username": "lisa_garcia",
+    "name": "Lisa Garcia",
+    "email": "lisa.garcia@email.com",
+    "avatar": "👩‍🏫",
+    "status": "online",
+    "joinDate": "2023-10-30",
+    "location": "Austin, TX",
+    "bio": "Teacher inspiring students and staying active",
+    "stats": {
+      "totalPoints": 1650,
+      "globalRank": 5,
+      "currentStreak": 20,
+      "longestStreak": 35,
+      "challengesCompleted": 7,
+      "challengesWon": 0,
+      "totalSteps": 275890,
+      "totalWorkouts": 134,
+      "totalCalories": 21500
+    },
+    "currentChallenges": [
+      {
+        "challengeId": 3,
+        "progress": 78,
+        "rank": 2,
+        "dailyProgress": [
+          { "date": "2024-01-15", "value": 8, "completed": true },
+          { "date": "2024-01-16", "value": 7, "completed": false },
+          { "date": "2024-01-17", "value": 8, "completed": true }
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "id": "hydration_hero",
+        "name": "Hydration Hero",
+        "icon": "💧",
+        "description": "Maintain proper hydration",
+        "earnedDate": "2024-01-13"
+      },
+      {
+        "id": "shining_star",
+        "name": "Shining Star",
+        "icon": "🌟",
+        "description": "Inspire others in the community",
+        "earnedDate": "2024-01-04"
+      },
+      {
+        "id": "creative_spirit",
+        "name": "Creative Spirit",
+        "icon": "🎨",
+        "description": "Share creative workout ideas",
+        "earnedDate": "2023-12-28"
+      }
+    ],
+    "friends": [1, 2, 3, 4],
+    "preferences": {
+      "notifications": true,
+      "privacy": "public",
+      "units": "imperial"
+    }
+  }
+]

@@ -3,38 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join fitness challenges, track progress, and achieve goals with our interactive fitness app.">
-    <title>Fitness Challenge</title>
-
-    <!-- Google Fonts -->
+    <title>FitChallenge - Gamified Fitness Platform</title>
+    <meta name="description" content="Join fitness challenges, compete with friends, and stay motivated with our gamified fitness platform.">
+    <meta name="keywords" content="fitness, challenge, health, workout, Google Fit, PWA">
+    <meta name="author" content="Daniel Oyeniyi">
+    <meta name="theme-color" content="#007BFF">
+    <!-- Open Graph (Social Media Sharing) -->
+    <meta property="og:title" content="Join the Fitness Challenge!">
+    <meta property="og:description" content="Track your workouts and achieve fitness goals!">
+    <meta property="og:image" content="assets/images/social-preview.jpg">
+    <meta property="og:url" content="https://yourapp.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="180x180" href="/path-to-your-icon/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@500&family=Roboto:wght@400&family=Lato:wght@400&family=Bebas+Neue&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
-    <script defer src="assets/script.js"></script>
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/png">
+    <link rel="manifest" href="manifest.json">
+  
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="assets/images/logo.png" alt="Fitness Challenge Logo">
-            <h1>Fitness Challenge</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="challenge.html">Challenges</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M14 9h1.5a2.5 2.5 0 0 1 0 5H14"></path>
+                        <path d="m6 9 3 3 3-3"></path>
+                    </svg>
+                    <span class="logo-text">Fitness Challenge</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="challenge.html" class="nav-link">
+                    <span class="nav-icon">🎯</span>
+                    <span>Challenges</span>
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <span class="nav-icon">👤</span>
+                    <span>Profile</span>
+                </a>
+                <a href="https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=23QKCX&redirect_uri=https://dandrichest.github.io/fitness-challenge/profile.html&scope=activity%20heartrate%20nutrition">Connect Fitbit</a>
+
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="btn-icon" id="notificationBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                        <path d="m13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+    
+                <button type="button" class="btn-icon mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" title="Open Menu">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to the Fitness Challenge!</h1>
-        <p>Track your progress, challenge friends, and stay motivated.</p>
-        <button onclick="joinChallenge()">Join a Challenge</button>
-    </section>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome back, Sarah! 🚀</h1>
+                    <p class="hero-subtitle">You're crushing your goals! Keep the momentum going.</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-value" id="todaySteps">8,247</span>
+                            <span class="stat-label">Steps Today</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">#3</span>
+                            <span class="stat-label">Current Rank</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Days Left</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Today's Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card stat-card-blue">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <span class="stat-title">Steps</span>
+                            <span class="stat-number" id="stepsCount">8,247</span>
+                            <span class="stat-progress">82% of goal</span>
+                        </div>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-red">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <span class="stat-title">Calories</span>
+                            <span class="stat-number">420</span>
+                            <span class="stat-progress">Burned</span>
+                        </div>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-purple">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <span class="stat-title">Workouts</span>
+                            <span class="stat-number">2</span>
+                            <span class="stat-progress">Completed</span>
+                        </div>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6"></path>
+                                <path d="m21 12-6 0m-6 0-6 0"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-cyan">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <span class="stat-title">Water</span>
+                            <span class="stat-number">6/8</span>
+                            <span class="stat-progress">Glasses</span>
+                        </div>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path>
+                                <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2.04 4.6 4.14 5.78s3.83 2.8 3.83 4.69c0 2.44-2.01 4.44-4.5 4.44-2.5 0-4.5-2-4.5-4.44 0-1.89 1.73-3.51 3.83-4.69s3.64-3.28 4.14-5.78c0 0-1.5 1.5-3 2.47s-3 2.13-3 3.53"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card-pink">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <span class="stat-title">Heart Rate</span>
+                            <span class="stat-number">72</span>
+                            <span class="stat-progress">BPM</span>
+                        </div>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Challenge & Weekly Progress -->
+            <section class="dashboard-grid">
+                <div class="challenge-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Current Challenge</h3>
+                        <span class="status-badge status-active">Active</span>
+                    </div>
+                    <div class="challenge-content">
+                        <h4 class="challenge-name">30-Day Step Challenge</h4>
+                        <p class="challenge-info">12 days remaining</p>
+                        
+                        <div class="progress-section">
+                            <div class="progress-header">
+                                <span class="progress-label">Progress</span>
+                                <span class="progress-value">68%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 68%"></div>
+                            </div>
+                        </div>
+
+                        <div class="challenge-stats">
+                            <div class="challenge-stat">
+                                <span class="stat-label">Your Rank</span>
+                                <span class="stat-value">#3</span>
+                            </div>
+                            <div class="challenge-stat">
+                                <span class="stat-label">Participants</span>
+                                <span class="stat-value">24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weekly-progress-card">
+                    <div class="card-header">
+                        <h3 class="card-title">This Week's Progress</h3>
+                        <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
+                            <polyline points="17,6 23,6 23,12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="weekly-progress" id="weeklyProgress">
+                        <!-- Weekly progress will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Achievements -->
+            <section class="achievements-section">
+                <h3 class="section-title">Recent Achievements 🏆</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card achievement-red">
+                        <div class="achievement-icon">🔥</div>
+                        <h4 class="achievement-title">Week Warrior</h4>
+                        <p class="achievement-desc">Complete 7 days in a row</p>
+                    </div>
+                    <div class="achievement-card achievement-blue">
+                        <div class="achievement-icon">👟</div>
+                        <h4 class="achievement-title">Step Master</h4>
+                        <p class="achievement-desc">10,000 steps in a day</p>
+                    </div>
+                    <div class="achievement-card achievement-purple">
+                        <div class="achievement-icon">🦋</div>
+                        <h4 class="achievement-title">Social Butterfly</h4>
+                        <p class="achievement-desc">Invite 5 friends</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <button class="action-btn action-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                    </svg>
+                    <span>Log Workout</span>
+                </button>
+                <button class="action-btn action-green" onclick="window.location.href='challenge.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6"></path>
+                        <path d="m21 12-6 0m-6 0-6 0"></path>
+                    </svg>
+                    <span>Join Challenge</span>
+                </button>
+                <button class="action-btn action-purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="m19 8 2 2-2 2"></path>
+                        <path d="m21 10-7.5 0"></path>
+                    </svg>
+                    <span>Invite Friends</span>
+                </button>
+                <button class="action-btn action-yellow" onclick="window.location.href='profile.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M14 9h1.5a2.5 2.5 0 0 1 0 5H14"></path>
+                        <path d="m6 9 3 3 3-3"></path>
+                    </svg>
+                    <span>View Badges</span>
+                </button>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Fitness Challenge. All rights reserved.</p>
+        <p>&copy; 2025 Fitness Challenge | Stay Fit, Stay Healthy</p>
     </footer>
+    <script src="assets/script.js"></script>
 </body>
 </html>
