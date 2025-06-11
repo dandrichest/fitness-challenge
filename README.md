@@ -1,4 +1,4 @@
-# FitChallenge - Gamified Fitness Platform
+# Fitness Challenge
 
 A modern, gamified fitness platform that combines fitness tracking with social motivation to help users stay active and engaged with their health goals.
 
@@ -44,7 +44,7 @@ A modern, gamified fitness platform that combines fitness tracking with social m
 
 ## 📱 Progressive Web App (PWA)
 
-FitChallenge is built as a Progressive Web App with:
+Fitness Challenge is built as a Progressive Web App with:
 - **Offline Functionality** - Core features work without internet
 - **Mobile Responsive** - Optimized for all device sizes
 - **App-like Experience** - Can be installed on mobile devices
@@ -81,20 +81,6 @@ FitChallenge is built as a Progressive Web App with:
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - Local web server (optional, for development)
 
-### Installation
-1. Clone or download the project files
-2. Open `index.html` in your web browser
-3. For development, serve files through a local web server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   
-   # Using PHP
-   php -S localhost:8000
-   ```
 
 ### Usage
 1. **Dashboard**: View your daily stats, current challenges, and progress
@@ -121,18 +107,15 @@ Edit `data/challenges.json` to add new challenge types:
 
 ### User Data
 User progress is stored in LocalStorage. For production, integrate with:
-- **Fitness APIs**: Google Fit, Fitbit, Apple HealthKit
-- **Backend Database**: Firebase, MongoDB, PostgreSQL
+- **Fitness APIs**: Fitbit
 - **Authentication**: OAuth, JWT tokens
 
 ## 🌐 API Integration
 
 ### Fitness Tracking APIs
 The platform is designed to integrate with:
-- **Google Fit API** - Android fitness data
 - **Fitbit Web API** - Fitbit device data
-- **Apple HealthKit** - iOS health data
-- **Strava API** - Running and cycling data
+a
 
 ### Social Media APIs
 For sharing achievements:
@@ -203,9 +186,9 @@ For sharing achievements:
 
 For support, feature requests, or bug reports:
 - Create an issue in the repository
-- Email: support@fitchallenge.app
+- Email: support@fitnesschallenge.app
 
 
 ---
 
-**FitChallenge** - Gamifying fitness, one challenge at a time! 🏆💪
+**Fitness Challenge** - Gamifying fitness, one challenge at a time! 🏆💪
